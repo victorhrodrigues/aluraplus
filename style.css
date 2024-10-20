@@ -1,0 +1,163 @@
+:root{
+    --branco-principal: #FFFFFF;
+    --cinza-secundário: #C0C0C0;
+    --botao-azul: #167BF7;
+    --cor-de-fundo: #00030C;
+    --fonte-principal: "Inter", sans-serif;
+    --botao-azul-efeito: #3c92fa;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}   
+
+body{
+    background-color: var(--cor-de-fundo);
+    color: var(--branco-principal);
+    font-family: var(--fonte-principal);
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+/*Para saber mais sobre display:grid acesse: https://www.origamid.com/projetos/css-grid-layout-guia-completo/*/
+.container{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.principal{
+    background-image: url("./assets/Background.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    align-items: center; /* O uso do aling-items nesse caso alinha os elemento no eixo vertical e não no horizontal por causa do display:grid de .container*/
+    text-align: center; /* alinha ao centro todo elemento que está em um bloco e a section por padrão vem com display: block*/
+}
+
+.container__caixa{
+    margin: 0em 6em; /*cima e baixo = 0 direita e esquerda 6*/
+}
+
+.container__titulo{
+   font-size: 1.75rem;
+   font-weight: 700; 
+}
+
+.container__imagem{
+    margin: 1em 0em 2em 0em; /*cima 1, direita 0, baixo 2, esquerda 0*/
+}
+
+.container__botao{
+    background-color: var(--botao-azul);
+    color: var(--branco-principal);
+    border-radius: 0.3125rem;
+    padding: 1em;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 1em;
+}
+
+.container__botao:hover{
+    background-color: var(--botao-azul-efeito);
+    color: var(--cor-de-fundo);
+}
+
+.botao__secundario{
+    background-color: transparent; /*faz o botão ficar transparente*/
+    border: 0.125rem solid var(--branco-principal); /*faz o contorno do botão*/
+}
+
+.container__aviso{
+    font-size: 0.75rem;
+    color: var(--cinza-secundário);
+}
+
+.secundario{
+    align-items: center;
+    margin: 0em 10em;
+}
+
+.secundario__imagem{
+    width: 80%;
+}
+
+.container__descricao{
+    padding: 2em;
+}
+
+.descricao__titulo{
+    font-weight: 700;
+    font-size: 4.875rem;
+    color: var(--branco-principal);
+    margin-bottom: 0.1em;    
+}
+
+.descricao__texto{
+    color: var(--cinza-secundário);
+}
+
+.secundario__botao{
+    display: inline-block; /*tentar otimizar o tamanho peguando informações do block e do inline, no nosso caso deixa o botão de acordo com o texto, 
+    inline tranforma o elemento em linha pegando apenas o espaço do conteudo  e o block faz a quebra de linha do texto de cima para saber mais acesse:
+    https://medium.com/collabcode/pare-de-chutar-e-aprenda-como-funciona-o-display-inline-block-4e6cba2f19d4 */
+    margin-top: 1em;
+}
+
+.dispositivos{
+    text-align: center;
+}
+
+.dispositivos__titulo{
+    font-size: 3rem;
+    color: var(--branco-principal);
+}
+
+.dispositivos__lista{
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin: 5em 0em;
+}
+
+.lista__item{
+    font-size: 2rem;
+    color: var(--branco-principal);
+}   
+
+.rodape{
+    text-align: center;
+    margin: 5em 3em;
+}
+
+.rodape__logo{
+
+}
+
+.rodape__lista{
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin: 1em 0em 0em 0em; /*margin-top*/
+}
+
+.lista__link a{
+    text-decoration: none;
+    color: var(--branco-principal);
+    margin-left: 1rem;
+}
+
+.lista__link a:hover{
+    color: var(--botao-azul)
+}
+
+/*Quando o botão é apertado ficar para a cor que está selecionada até soltarmos*/
+.lista__link a:active{
+    color: purple;
+}
+
+.rodape__texto{
+    margin:1em 0em;
+    color: var(--cinza-secundário);
+    font-size: 0.875rem;
+}
