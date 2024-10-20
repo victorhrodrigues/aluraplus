@@ -4,7 +4,7 @@
     --botao-azul: #167BF7;
     --cor-de-fundo: #00030C;
     --fonte-principal: "Inter", sans-serif;
-    --botao-azul-efeito: #ae3cfa;
+    --botao-azul-efeito: #3c92fa;
 }
 
 *{
@@ -130,9 +130,6 @@ body{
     margin: 5em 3em;
 }
 
-.rodape__logo{
-
-}
 
 .rodape__lista{
     display: flex;
@@ -160,4 +157,43 @@ body{
     margin:1em 0em;
     color: var(--cinza-secundário);
     font-size: 0.875rem;
+}
+
+@media screen and (max-width: 778px){
+    /*Utilizamos o grid anteriormente pela tela se grande, mas para mobile será dificil utilizar essa técnica*/
+    .container{
+        display: block;
+        background-image: none;
+    }
+
+    /*Vamos agora arrumar a imagem combo que está muito grande*/
+    .container__imagem{
+        width: 50vw;
+    }
+
+    .container__caixa{
+        margin: 2em 2em;
+    }
+
+    .secundario{
+        margin:0;
+        text-align: center;
+    }
+
+    .secundario__imagem{
+        width: 50vw;
+    }
+
+    .dispositivos__lista{
+        display: block;
+    }
+
+    
+    .rodape__lista{
+        display: block;
+    }
+
+    .lista__link a{
+        margin: 0;
+    }
 }
